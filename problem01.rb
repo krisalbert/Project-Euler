@@ -10,3 +10,5 @@ end
 sum= 0
 nums.each { |a| sum +=a }
 puts sum
+
+#answer is 233168
