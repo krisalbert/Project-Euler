@@ -1,27 +1,20 @@
-nums  = [0]
-fib = 1
-m=0
+first_num = 1
+second_num = 1
+next_num = 0
+sum = 0
 
-currentNumber = 0
 limit = 4000000
 
-while currentNumber < limit do
-    if m < 1
-        fib = fib + nums[m]
-    else
-        fib = nums[m-1] + nums[m]
-    end
-    nums.push(fib)
-    currentNumber = fib
-    m+=1
-end
-#puts nums
-#puts "***************"
+while next_num < limit do
+	next_num = first_num + second_num
+	first_num = second_num
+	second_num = next_num
 
-sum= 0
-nums.keep_if { |a| a%2 ==0 }
-nums.each { |a| sum +=a }
-#puts nums
+	if next_num % 2 == 0
+		sum += next_num
+	end
+
+end
 puts sum
 
 #answer is 4613732
